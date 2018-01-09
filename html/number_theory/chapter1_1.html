@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>1.1数和序列</title>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['\\$','\\$']]}});
+        </script>
+        <script type="text/javascript"
+                async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    </head>
+    <body>
+        <h1>1.1数和序列</h1>
+        <h3>良序性质(The Well-Ordering Property)</h3>
+        <p>
+            每个非空的正整数集合都有一个最小元. <br>
+            \$ \forall A( A \subseteq \mathbb{Z}^+ \rightarrow 
+                \exists a(a \in A \land \forall b(b \in A \rightarrow a \leqslant b) ) ) \$ <br>
+            \$ A \subseteq \mathbb{Z}^+ \Rightarrow 
+                \exists a(a \in A \land \forall b(b \in A \rightarrow a \leqslant b) ) \$
+        </p>
+        <h3>有理数、无理数</h3>
+        <p>
+            如果存在整数\$p\$和\$q \neq 0\$, 使得\$r = p/q\$, 则称实数\$r\$是有理数. 如果\$r\$不是有理数, 则称为无理数.
+        </p>
+        <p>
+            \$\sqrt{2}\$是无理数.
+        </p>
+        <h3>代数数、超越数</h3>
+        <p>
+            数\$\alpha\$称为代数数, 如果它是整系数多项式的根; 也就是说, 
+            \$\alpha\$是代数数, 如果存在整数\$a_0, \cdots, a_n\$使得
+            \$ a_n\alpha^n + a_{n-1}\alpha^{n-1} + \cdots + a_0 = 0 \$.
+            如果数\$\alpha\$不是代数数, 则称为超越数.
+        </p>
+        <h3>最大整数(greatest integer)</h3>
+        <p>
+            实数\$x\$中的最大整数记为\$[x]\$, 是小于或等于\$x\$的最大整数,
+            即\$[x]\$是满足
+            $$ [x] \leqslant x < [x] + 1 $$
+            的整数.
+        </p>
+        <p>
+            最大整数函数也被称为取整函数(floor function). 
+            在计算机科学中通常用记号\$ \lfloor x \rfloor \$来代替\$[x]\$.
+        </p>
+        <p>
+            上取整函数(ceiling function)是在计算机科学中常用的相关函数. 
+            一个实数\$x\$的上整数函数记为\$ \lceil x \rceil \$,
+            是大于或等于x的最小整数.
+        </p>
+        <h3>分数部分(fractional part)</h3>
+        <p>
+            实数\$x\$的分数部分记为\$\{x\}\$, 是\$x\$与\$[x]\$的差,
+            即\$\{x\} = x - [x]\$.
+        </p>
+        <h3>鸽笼原理</h3>
+        <p>
+            如果把\$k+1\$个或者更多的物体放入\$k\$个盒子中, 
+            那么至少有一个盒子中有两个或者更多的物体.
+        </p>
+        <h3>狄利克雷逼近定理</h3>
+        <p>
+            如果\$\alpha\$是一个实数, \$n\$是一个正整数, 
+            则存在整数\$a\$和\$b\$, \$ 1 \leqslant a \leqslant n \$,
+            使得\$ \left| a \alpha - b \right| < 1/n \$.
+        </p>
+        <h3>等比数列(geometric progression)</h3>
+        <p>
+            等比数列是形如\$a, ar, ar^2, ar^3, \cdots\$的序列, 其中初始项(initial term)\$a\$和公比(common ratio)\$r\$都是实数.
+        </p>
+        <h3>等差数列(arithmetic progression)</h3>
+        <p>
+            等差数列是形如\$a, a+d, a+2d, \cdots, a+nd, \cdots\$的序列.
+        </p>
+        <h3>可数(countable)、不可数(uncountable)</h3>
+        <p>
+            一个集合可数, 如果它是有限的或者是无穷的但与正整数集合之间存在一个一一映射. 如果一个集合不是可数的, 则成为不可数.
+        </p>
+        <p>
+            有理数集合是可数的.
+        </p>
+    </body>
+</html>
+
+
+
