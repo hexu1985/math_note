@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>向量方程</title>
+        <title>1.3向量方程</title>
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({tex2jax: {inlineMath: [['\\$','\\$']]}});
         </script>
@@ -49,7 +49,7 @@
         </p>
         <h3>\$\mathbb{R}^n\$中向量的代数性质</h3>
         <p>
-            对\$\mathbb{R}^n\$中一切向量\$\boldsymbol{u}\$, \$\boldsymbol{v}\$, \$\boldsymbol{w}\$以及标量\$c\$和\$d\$,
+            对\$\mathbb{R}^n\$中一切向量\$\boldsymbol{u}, \boldsymbol{v}, \boldsymbol{w}\$以及标量\$c\$和\$d\$,
             $$
             \begin{align*}
                 (1)\quad & \boldsymbol{u} + \boldsymbol{v} = \boldsymbol{v} + \boldsymbol{u} \\
@@ -64,8 +64,137 @@
             $$
             其中\$-\boldsymbol{u}\$表示\$(-1)\boldsymbol{u}\$.
         </p>
-        <h3></h3>
+        <h3>线性组合(linear combination)</h3>
         <p>
+            给定\$\mathbb{R}^n\$中向量\$\boldsymbol{v}_1, \boldsymbol{v}_2, \cdots, \boldsymbol{v}_p\$和标量\$c_1, c_2, \cdots, c_p\$, 向量
+            $$ 
+                \boldsymbol{y} = c_1\boldsymbol{v}_1 + c_2\boldsymbol{v}_2 + \cdots + c_p\boldsymbol{v}_p
+            $$
+            称为向量\$\boldsymbol{v}_1, \boldsymbol{v}_2, \cdots, \boldsymbol{v}_p\$以\$c_1, c_2, \cdots, c_p\$为权的线性组合(linear combination). 
+        </p>
+        <h3>向量方程</h3>
+        <p>
+            向量方程
+            $$
+                x_1\boldsymbol{a}_1 + x_2\boldsymbol{a}_2 + \cdots + x_n\boldsymbol{a}_n = \boldsymbol{b} 
+            $$
+            和增广矩阵为
+            $$
+                \begin{bmatrix}
+                    \boldsymbol{a}_1 & \boldsymbol{a}_2 & \cdots & \boldsymbol{a}_n & \boldsymbol{b}
+                \end{bmatrix} \tag{$1$}
+            $$
+            的线性方程组有相同的解集. 特别地, \$\boldsymbol{b}\$可表示为
+            \$\boldsymbol{a}_1 , \boldsymbol{a}_2 , \cdots , \boldsymbol{a}_n\$
+            的线性组合, 当且仅当对应于(1)式的方程组有解.
+        </p>
+        <h3>向量集合的张成</h3>
+        <p>
+            若\$\boldsymbol{v}_1, \boldsymbol{v}_2, \cdots, \boldsymbol{v}_p\$是\$\mathbb{R}^n\$中的向量, 
+            则\$\boldsymbol{v}_1, \boldsymbol{v}_2, \cdots, \boldsymbol{v}_p\$的所有线性组合所成的集合用记号
+            \$Span\{\boldsymbol{v}_1, \boldsymbol{v}_2, \cdots, \boldsymbol{v}_p\}\$表示, 称为由
+            \$\boldsymbol{v}_1, \boldsymbol{v}_2, \cdots, \boldsymbol{v}_p\$所生成(张成)的\$\mathbb{R}^n\$的子集,
+            也就是说, \$\boldsymbol{v}_1, \boldsymbol{v}_2, \cdots, \boldsymbol{v}_p\$是所有形如
+            $$
+                c_1\boldsymbol{v}_1 + c_2\boldsymbol{v}_2 + \cdots + c_p\boldsymbol{v}_p
+            $$
+            的向量的集合, 其中\$c_1, c_2, \cdots, c_p\$为标量.
+        </p>
+        <p>
+            要判断向量\$\boldsymbol{b}\$是否属于\$Span\{\boldsymbol{v}_1, \boldsymbol{v}_2, \cdots, \boldsymbol{v}_p\}\$,
+            就是判断向量方程
+            $$
+                x_1\boldsymbol{v}_1 + x_2\boldsymbol{v}_2 + \cdots + x_n\boldsymbol{v}_p = \boldsymbol{b} 
+            $$
+            是否有解, 或等价地, 判断增广矩阵为
+            $$
+                \begin{bmatrix}
+                    \boldsymbol{v}_1 & \boldsymbol{v}_2 & \cdots & \boldsymbol{v}_p & \boldsymbol{b}
+                \end{bmatrix}
+            $$
+            的线性方程组是否有解.
+        </p>
+        <HR><!--补充内容-->
+        <h3>向量(vector)</h3>
+        <p>
+            我们称由实数组成的\$n\$元组为向量(vector).
+        </p>
+        <h3>行向量(row vector)</h3>
+        <p>
+            如果将\$n\$元组表示为一个\$1 \times n\$的矩阵， 则称为行向量(row vector). <br>
+            我们用在字母上面加上一水平箭头的黑斜体小写字母表示行向量.
+            $$
+                \boldsymbol{\vec{x}} = 
+                    \begin{bmatrix} 
+                        x_{1} & x_{2} & \cdots & x_{n}   
+                    \end{bmatrix}
+            $$
+        </p>
+        <h3>列向量(column vector)</h3>
+        <p>
+            如果将\$n\$元组表示为一个\$n \times 1\$的矩阵， 则称为列向量(column vector). <br>
+            在使用矩阵方程时, 用列向量(\$n \times 1\$的矩阵)表示解是较为方便的. <br>
+            列向量的标准记号采用黑斜体小写字母.
+            $$
+                \boldsymbol{x} = \begin{bmatrix}
+                                    x_{1}   \\ 
+                                    x_{2}   \\ 
+                                    \vdots  \\ 
+                                    x_{n}   
+                                 \end{bmatrix}
+            $$
+        </p>
+        <h3>\$n\$维欧几里得空间(Euclidean n-space)</h3>
+        <p>
+            所有\$n \times 1\$的实矩阵构成的集合称为\$n\$维欧几里得空间(Euclidean n-space),
+            通常记为\$\mathbb{R}^n\$.
+        </p>
+        <h3>向量方程</h3>
+        <p>
+            线性方程组
+            $$
+                a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1 \\
+                a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2 \\
+                \vdots                          \\
+                a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n=b_m
+            $$
+            对应的增广矩阵
+            $$
+                \begin{bmatrix}
+                    a_{11} & a_{12} & \cdots & a_{1n} & b_1 \\
+                    a_{21} & a_{22} & \cdots & a_{2n} & b_2 \\
+                    \vdots &        &        &        &     \\
+                    a_{m1} & a_{m2} & \cdots & a_{mn} & b_m 
+                \end{bmatrix}
+            $$
+            对应的向量方程
+            $$
+                x_1\boldsymbol{a}_1 + x_2\boldsymbol{a}_2 + \cdots + x_n\boldsymbol{a}_n = \boldsymbol{b} 
+            $$
+            和向量表示的增广矩阵
+            $$
+            \begin{bmatrix}
+                \boldsymbol{a}_1 & \boldsymbol{a}_2 & \cdots & \boldsymbol{a}_n & \boldsymbol{b}
+            \end{bmatrix}
+            $$
+            观察可得
+            $$
+                \boldsymbol{a}_j = \begin{bmatrix}
+                                    a_{1j}   \\ 
+                                    a_{2j}   \\ 
+                                    \vdots  \\ 
+                                    a_{mj}   
+                                 \end{bmatrix}
+            $$
+            其中\$j = 1,\cdots,n\$
+            $$
+                \boldsymbol{b} = \begin{bmatrix}
+                                    b_{1}   \\ 
+                                    b_{2}   \\ 
+                                    \vdots  \\ 
+                                    b_{m}   
+                                 \end{bmatrix}
+            $$
         </p>
     </body>
 </html>
